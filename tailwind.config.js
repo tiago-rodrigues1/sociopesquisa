@@ -25,6 +25,9 @@ module.exports = {
 				},
 			},
 		},
+		fontFamily: {
+			sans: ["Open-sans"],
+		},
 	},
 	variants: {
 		extend: {},
