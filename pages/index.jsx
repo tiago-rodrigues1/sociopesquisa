@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 import { GitHub } from "react-feather";
 
@@ -32,12 +33,19 @@ export default function Home() {
 						<p className="max-w-full text-lg font-semibold text-colorText-primary leading-relaxed">
 							Colobore com nosso trabalho clicando no botão abaixo
 						</p>
-						<a
-							href="https://forms.gle/8TJHxsMQygSM1jN99"
-							className="bg-primary text-center text-colorText-primary py-4 w-full duration-300 hover:bg-primary-dark rounded-2xl font-bold"
-						>
-							Acessar formulário
-						</a>
+						<div className="flex flex-col gap-4 h-auto w-full">
+							<a
+								href="https://forms.gle/8TJHxsMQygSM1jN99"
+								className="bg-primary text-center text-colorText-primary py-4 w-full duration-300 hover:bg-primary-dark rounded-2xl font-bold"
+							>
+								Acessar formulário
+							</a>
+							<Link href="/resultados">
+								<a className="bg-transparent border-2 border-primary text-center py-4 w-full duration-300 hover:bg-primary hover:bg-opacity-30 rounded-2xl font-bold text-primary">
+									Ver resultados
+								</a>
+							</Link>
+						</div>
 					</div>
 				</section>
 				<section className="hidden sm:flex flex-col gap-6 flex-1 w-1/3 min-h-full bg-main-mediumDark items-center p-6">
@@ -45,12 +53,19 @@ export default function Home() {
 						<p className="max-w-full text-lg sm:text-2xl text-colorText-primary leading-relaxed">
 							Colobore com nosso trabalho clicando no botão abaixo
 						</p>
-						<a
-							href="https://forms.gle/8TJHxsMQygSM1jN99"
-							className="bg-primary text-center py-4 w-full duration-300 hover:bg-primary-dark rounded-2xl font-bold text-colorText-primary"
-						>
-							Acessar formulário
-						</a>
+						<div className="flex flex-col gap-4 h-auto w-full">
+							<a
+								href="https://forms.gle/8TJHxsMQygSM1jN99"
+								className="bg-primary text-center text-colorText-primary py-4 w-full duration-300 hover:bg-primary-dark rounded-2xl font-bold"
+							>
+								Acessar formulário
+							</a>
+							<Link href="/resultados">
+								<a className="bg-transparent border-2 border-primary text-center py-4 w-full duration-300 hover:bg-primary hover:bg-opacity-30 rounded-2xl font-bold text-primary">
+									Ver resultados
+								</a>
+							</Link>
+						</div>
 					</div>
 				</section>
 			</main>
