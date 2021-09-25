@@ -8,96 +8,49 @@ import { CardIntegrante } from "../components/CardIntegrante";
 
 export default function Home() {
 	return (
-		<div className="min-h-screen h-full w-screen font-sans bg-main">
+		<div className="min-w-screen min-h-screen font-sans bg-main grid">
 			<Head>
 				<title>SocioPesquisa</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className="flex-1 min-h-screen h-full w-full flex flex-col sm:flex-row">
-				<section className="sm:w-2/3 h-full p-6 flex flex-col items-center justify-evenly">
-					<header className="self-start flex flex-col gap-2 text-colorText-primary">
+			<div className="min-h-full min-w-full grid sm:grid-cols-3">
+				<header className="p-6 sm:p-12 h-full sm:col-span-2 flex flex-col gap-12 md:gap-14 lg:gap-16 xl:gap-24">
+					<div className="text-colorText-primary flex flex-col gap-4">
 						<h1 className="font-bold text-2xl sm:text-3xl">
 							SocioPesquisa
 						</h1>
-						<h2>Indústria cultural e Cultura de massa</h2>
-					</header>
-					<div className="">
-						<Image
-							src="/images/indexImage.svg"
-							alt="imagem de pessoa pesquisando"
-							height={462}
-							width={360}
-						/>
+						<h2 className="text-lg sm:text-xl">
+							Indústria cultural e Cultura de massa
+						</h2>
 					</div>
-					<div className="sm:hidden flex flex-col gap-6 items-center justify-center p-4">
-						<p className="max-w-full text-lg font-semibold text-colorText-primary leading-relaxed">
-							Colobore com nosso trabalho clicando no botão abaixo
-						</p>
-						<div className="flex flex-col gap-4 h-auto w-full">
-							<a
-								href="https://forms.gle/8TJHxsMQygSM1jN99"
-								className="bg-primary text-center text-colorText-primary py-4 w-full duration-300 hover:bg-primary-dark rounded-2xl font-bold"
-							>
-								Acessar formulário
+					<Image
+						src="/images/indexImage.svg"
+						alt="Imagem de pesquisador"
+						width={309.76}
+						height={220}
+						layout="responsive"
+					/>
+				</header>
+				<main className="p-6 sm:py-12 sm:bg-main-mediumDark sm:col-span-1 w-full h-auto flex flex-col items-center justify-between gap-12 sm:gap-0">
+					<p className="text-center text-colorText-primary font-bold text-lg sm:text-xl leading-relaxed">
+						Colobore com nosso trabalho acessando o formulário
+						abaixo
+					</p>
+					<div className="w-full flex flex-col gap-6 sm:gap-8 items-center justify-center font-bold">
+						<a
+							href="https://forms.gle/8TJHxsMQygSM1jN99"
+							className="text-center text-colorText-primary  p-4 w-full rounded-2xl flex items-center justify-center bg-primary-dark duration-200 hover:bg-primary "
+						>
+							Acessar Formulário
+						</a>
+						<Link href="/resultados">
+							<a className="text-center text-primary p-4 w-full rounded-2xl bg-transparent flex items-center justify-center border-2 border-primary duration-200 hover:bg-primary hover:bg-opacity-30">
+								Ver resultados
 							</a>
-							<Link href="/resultados">
-								<a className="bg-transparent border-2 border-primary text-center py-4 w-full duration-300 hover:bg-primary hover:bg-opacity-30 rounded-2xl font-bold text-primary">
-									Ver resultados
-								</a>
-							</Link>
-						</div>
+						</Link>
 					</div>
-				</section>
-				<section className="hidden sm:flex flex-col gap-6 flex-1 w-1/3 min-h-full bg-main-mediumDark items-center p-6">
-					<div className="py-10 h-full flex flex-col gap-6 items-center justify-between">
-						<p className="max-w-full text-lg sm:text-2xl text-colorText-primary leading-relaxed">
-							Colobore com nosso trabalho clicando no botão abaixo
-						</p>
-						<div className="flex flex-col gap-4 h-auto w-full">
-							<a
-								href="https://forms.gle/8TJHxsMQygSM1jN99"
-								className="bg-primary text-center text-colorText-primary py-4 w-full duration-300 hover:bg-primary-dark rounded-2xl font-bold"
-							>
-								Acessar formulário
-							</a>
-							<Link href="/resultados">
-								<a className="bg-transparent border-2 border-primary text-center py-4 w-full duration-300 hover:bg-primary hover:bg-opacity-30 rounded-2xl font-bold text-primary">
-									Ver resultados
-								</a>
-							</Link>
-						</div>
-					</div>
-				</section>
-			</main>
-			<footer className="h-auto w-full p-6 sm:px-0 bg-main-mediumDark sm:bg-main-dark flex flex-col gap-6">
-				<h1 className="text-colorText-primary font-bold text-lg pl-6">
-					Componentes
-				</h1>
-				<section className="flex flex-col sm:flex-row items-center lg:justify-evenly gap-6  sm:gap-0 md:overflow-y-scroll lg:overflow-y-hidden sm:px-8">
-					<CardIntegrante
-						nome="Gabrielly Brandão"
-						foto="/images/integrantes/gaby-profile.jpg"
-						email="gabrielly.n@escolar.ifrn.edu.br"
-					/>
-					<CardIntegrante
-						nome="Kauan Farias"
-						foto="/images/integrantes/kauan-profile.jpg"
-						email="kauan.f@escolar.ifrn.edu.br"
-					/>
-					<CardIntegrante
-						nome="Tiago Rodrigues"
-						foto="/images/integrantes/tiago-profile.jpg"
-						email="tiago.r@escolar.ifrn.edu.br"
-					/>
-				</section>
-				<a
-					href="https://github.com/tiago-rodrigues1"
-					className="text-colorText-secondary hover:underline flex gap-4 items-center justify-center"
-				>
-					<GitHub />
-					<span>© Tiago Rodrigues - 2021</span>
-				</a>
-			</footer>
+				</main>
+			</div>
 		</div>
 	);
 }
